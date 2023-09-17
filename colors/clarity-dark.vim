@@ -59,6 +59,7 @@ call s:highlight('TabLine',          s:DarkSlateBlue, s:LilacBlue,           '')
 call s:highlight('TabLineSel',       s:LightLavender, s:BlueGray,            '')
 call s:highlight('TabLineFill',      s:DarkSlateBlue, s:LilacBlue,           '')
 call s:highlight('TSPunctDelimiter', '',              s:CeruleanBlue,        '')
+call s:highlight('Special',          '',              s:DeepPink,            '')
 call s:highlight('Type',             '',              s:LavenderBlush,       '')
 
 highlight! link NonText Comment
