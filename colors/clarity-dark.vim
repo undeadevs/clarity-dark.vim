@@ -41,14 +41,15 @@ call s:highlight('Repeat',           '',              '',                    'bo
 call s:highlight('Function',         '',              s:LightGray,           '')
 call s:highlight('String',           '',              s:Turqoise,            '')
 call s:highlight('Number',           '',              s:DeepPink,            '')
-call s:highlight('TSCharacter',      '',              s:DeepPink,            '')
+call s:highlight('@character',       '',              s:DeepPink,            '')
 call s:highlight('StatusLine',       s:RichBlack,     s:CornflowerBlue,      '')
 call s:highlight('WildMenu',         s:DarkViolet,    s:CeruleanBlue,        '')
 call s:highlight('Pmenu',            s:DarkViolet,    s:CeruleanBlue,        '')
 call s:highlight('PmenuSel',         s:CeruleanBlue,  s:BlueGray,            '')
 call s:highlight('PmenuThumb',       s:DarkViolet,    s:CeruleanBlue,        '')
-call s:highlight('DiffAdd',          s:RichBlack,     '',                    '')
-call s:highlight('DiffDelete',       s:Plum,          '',                    '')
+call s:highlight('DiffAdd',          s:DarkSlateGrey,     s:Turqoise,                    '')
+call s:highlight('DiffChanged',       s:BlueGray,          s:CeruleanBlue,                    '')
+call s:highlight('DiffDelete',       s:Plum,          s:DeepPink,                    '')
 call s:highlight('Normal',           s:DarkViolet,    s:CeruleanBlue,        '')
 call s:highlight('Visual',           s:DarkSlateGrey, '',                    '')
 call s:highlight('CursorLine',       s:DarkSlateGrey, '',                    '')
@@ -58,39 +59,45 @@ call s:highlight('LineNr',           '',              s:LightCornflowerBlue, '')
 call s:highlight('TabLine',          s:DarkSlateBlue, s:LilacBlue,           '')
 call s:highlight('TabLineSel',       s:LightLavender, s:BlueGray,            '')
 call s:highlight('TabLineFill',      s:DarkSlateBlue, s:LilacBlue,           '')
-call s:highlight('TSPunctDelimiter', '',              s:CeruleanBlue,        '')
+call s:highlight('@punctuation.delimiter', '',              s:CeruleanBlue,        '')
 call s:highlight('Special',          '',              s:CeruleanBlue,        '')
-call s:highlight('Type',             '',              s:LavenderBlush,       '')
+call s:highlight('Type',             '',              s:LavenderBlush,       'bold')
 
-highlight! link NonText Comment
-highlight! link TSKeyword Keyword
-highlight! link TSFloat Number
-highlight! link TSProperty TSField
-highlight! link TSRepeat Repeat
-highlight! link TSFuncMacro Macro
-highlight! link TSType Type
-highlight! link TSConstBuiltin TSVariableBuiltin
-highlight! link Macro Function
-highlight! link TSParameterReference TSParameter
-highlight! link TSFunction Function
-highlight! link Folded Comment
-highlight! link Operator Keyword
-highlight! link TelescopeNormal Normal
-highlight! link CursorLineNr Identifier
-highlight! link TSConstant Constant
-highlight! link TSPunctSpecial TSPunctDelimiter
-highlight! link TSField Constant
-highlight! link TSLabel Type
-highlight! link TSOperator Operator
-highlight! link TSString String
-highlight! link Conditional Operator
-highlight! link TSConditional Conditional
-highlight! link TSPunctBracket MyTag
-highlight! link TSComment Comment
-highlight! link TSTag MyTag
-highlight! link Whitespace Comment
-highlight! link TSTagDelimiter Type
-highlight! link TSParameter Constant
-highlight! link TSNamespace TSType
-highlight! link Repeat Conditional
-highlight! link TSNumber Number
+hi! link NonText Comment
+hi! link @keyword Keyword
+hi! link @number.float Number
+hi! link @property @variable.member
+hi! link @keyword.repeat Repeat
+hi! link @function.macro Macro
+hi! link @type Type
+hi! link @constant.builtin @variable.builtin
+hi! link Macro Function
+hi! link TSParameterReference TSParameter
+hi! link @function Function
+hi! link Folded Comment
+hi! link Operator Keyword
+hi! link TelescopeNormal Normal
+hi! link CursorLineNr Identifier
+hi! link @constant Constant
+hi! link @punctuation.special @punctuation.delimiter
+hi! link @variable.member Constant
+hi! link @label Type
+hi! link @operator Operator
+hi! link @string String
+hi! link Conditional Operator
+hi! link @keyword.conditional Conditional
+hi! link @punctuation.bracket MyTag
+hi! link @comment Comment
+hi! link @tag MyTag
+hi! link Whitespace Comment
+hi! link @tag.delimiter Type
+hi! link @variable.parameter Constant
+hi! link @module @type
+hi! link Repeat Conditional
+hi! link @number Number
+
+hi! link Added DiffAdd
+hi! link Changed DiffChanged
+hi! link Removed DiffDelete
+hi! link Delimiter Special
+hi! link @variable Identifier
